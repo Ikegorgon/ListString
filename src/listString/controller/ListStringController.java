@@ -3,16 +3,26 @@ package listString.controller;
 import java.util.List;
 import java.util.ArrayList;
 import listString.model.Kahoot;
+import listString.view.ListStringDisplay;
 
 public class ListStringController {
 	private List<Kahoot> myKahoots;
-		
+	private ListStringDisplay popup;
+	
 	public ListStringController() {
 		myKahoots = new ArrayList<Kahoot>();
+		popup = new ListStringDisplay();
 	}
 	public void start() {
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
+		fillTheList();
+		showTheList();
+	}
+	private void showTheList() {
+		for (int i = 0; i < myKahoots.size(); i++) {
+			popup.displayText(myKahoots.get(i).toString());
+		}
 	}
 	private void fillTheList() {
 		Kahoot fiftyStates = new Kahoot(50, 2, "John", true);
