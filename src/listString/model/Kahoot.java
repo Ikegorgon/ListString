@@ -20,6 +20,19 @@ public class Kahoot {
 		this.isJumble = isJumble;
 	}
 	
+	public String toString() {
+		String Jumble = "";
+		if (isJumble) {
+			Jumble += "is Jumbled.";
+		} else {
+			Jumble += "is not Jumbled.";
+		}
+		String description = "This Kahoot has " + questionCount + " questions, is level " + 
+	level + ", was made by " + creator + ", and " + Jumble;
+		
+		return description;
+	}
+	
 	public int getQuestionCount() {
 		return questionCount;
 	}
