@@ -34,6 +34,9 @@ public class ListStringController {
 			for (int CurrentLetterIndex = 0; CurrentLetterIndex < creator.length(); CurrentLetterIndex++) {
 				popup.displayText(currentCreator.substring(CurrentLetterIndex, CurrentLetterIndex + 1));
 			}
+			for (int letter = currentKahoot.getTopic().length() - 1; letter >= 0; letter -= 1) {
+				popup.displayText(currentKahoot.getTopic().substring(letter, letter + 1));
+			}
 		}
 	}
 	private void fillTheList() {
