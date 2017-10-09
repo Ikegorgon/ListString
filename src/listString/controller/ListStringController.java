@@ -46,22 +46,26 @@ public class ListStringController {
 		Kahoot num = new Kahoot(20, 3, "Patty", true, "Numbers");
 		Kahoot fruit = new Kahoot(12, 5, "George", true, "Fruits");
 		Kahoot pie = new Kahoot(1, 1, "Tanner", false, "Pie");
+		Kahoot name = new Kahoot(3, 1, "Doug", true, "Names");
 		myKahoots.add(fiftyStates);
 		myKahoots.add(abc);
 		myKahoots.add(num);
 		myKahoots.add(fruit);
 		myKahoots.add(pie);
+		myKahoots.add(name);
 	}
 	
 	private void changeTheList() {
+		String toRemove = "";
 		popup.displayText("The current list size is: " + myKahoots.size());
-		Kahoot removed = myKahoots.remove(3);
-		popup.displayText("I removed the Kahoot by " + removed.getCreator());
+		toRemove = popup.getResponse("What would you like to remove?");
+		Kahoot removed = myKahoots.remove(Integer.parseInt(toRemove));
+		popup.displayText("I removed the Kahoot about " + removed.getTopic());
 		popup.displayText("The list now has: " + myKahoots.size() + " items inside.");
 		myKahoots.add(0, removed);
 		
-		popup.displayText("The list iss still: " + myKahoots.size());
-		removed = myKahoots.set(2, new Kahoot());
-		popup.displayText("The kahoot by " + removed.getCreator() + " was replaced with " + myKahoots.get(2).getCreator());
+		popup.displayText("The kahoot about " + removed.getTopic() + " was replaced back in.");
+		popup.displayText("The list is back to: " + myKahoots.size());
+		
 	}
 }
