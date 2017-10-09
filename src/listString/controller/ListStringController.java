@@ -68,4 +68,11 @@ public class ListStringController {
 		popup.displayText("The list is back to: " + myKahoots.size());
 		
 	}
+	
+	public ListStringDisplay getPopup() {
+		return popup;
+	}
+	public ArrayList<Kahoot> getMyKahoots() {
+		return (ArrayList<Kahoot>)myKahoots;
+	}
 }
