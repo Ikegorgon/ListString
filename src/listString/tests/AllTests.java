@@ -1,4 +1,4 @@
-package tools.tests;
+package listString.tests;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

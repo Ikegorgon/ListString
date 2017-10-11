@@ -1,4 +1,4 @@
-package tools.tests;
+package listString.tests;
 
 import static org.junit.Assert.*;
 
@@ -7,18 +7,18 @@ import java.util.ArrayList;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import tools.controller.Controller;
-import tools.view.PopupDisplay;
-import tools.model.Kahoot;
+import listString.controller.ListStringController;
+import listString.view.ListStringDisplay;
+import listString.model.Kahoot;
 
 public class ControllerTest
 {
-	private Controller tested;
+	private ListStringController tested;
 
 	@Before
 	public void setUp() throws Exception
 	{
-		tested = new Controller();
+		tested = new ListStringController();
 	}
 
 	@After
@@ -44,7 +44,7 @@ public class ControllerTest
 	@Test
 	public void testGetPopup()
 	{
-		assertTrue("Popup type is incorrect", tested.getPopup() instanceof PopupDisplay);
+		assertTrue("Popup type is incorrect", tested.getPopup() instanceof ListStringDisplay);
 	}
 
 	@Test

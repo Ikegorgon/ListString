@@ -1,4 +1,4 @@
-package tools.tests;
+package listString.tests;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import tools.model.Kahoot;
+import listString.model.Kahoot;
 
 public class KahootTest
 {
@@ -34,7 +34,7 @@ public class KahootTest
 	@Test
 	public void testKahootStringIntString()
 	{
-		tested = new Kahoot("Sample", 0, "");
+		tested = new Kahoot(0, 0, "Sample", false, "Testing");
 		assertTrue("Creator name not being set", tested.getCreator().equals("Sample"));
 	}
 
