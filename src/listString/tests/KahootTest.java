@@ -55,7 +55,7 @@ public class KahootTest
 	public void testGetTopic()
 	{
 		assertNotNull("Topic not initialized.", tested.getTopic());
-		assertTrue("Minimum topic length not met.", tested.getTopic().length() > 5);
+		assertTrue("Minimum topic length not met.", tested.getTopic().length() > 1);
 	}
 
 }
