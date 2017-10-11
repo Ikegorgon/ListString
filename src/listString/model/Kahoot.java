@@ -10,9 +10,9 @@ public class Kahoot {
 	public Kahoot() {
 		questionCount = 0;
 		level = 0;
-		creator = "";
+		creator = "(creator)";
 		isJumble = false;
-		topic = "";
+		topic = "(topic)";
 	}
 	
 	public Kahoot(int questionCount, int level, String creator, boolean isJumble, String topic) {
